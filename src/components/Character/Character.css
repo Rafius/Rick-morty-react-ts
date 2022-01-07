@@ -1,0 +1,48 @@
+.Character {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 15px;
+  width: 300px;
+  min-height: 300px;
+  color: #f8f9fa;
+  text-decoration: none;
+  position: relative;
+}
+
+.Character-img {
+  border-radius: 13px 13px 0 0;
+  min-height: 300px;
+  object-fit: contain;
+}
+
+.Character-status {
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 20px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  top: 10px;
+  right: 5px;
+  position: absolute;
+}
+
+.Character-Name {
+  margin: 20px;
+}
+
+.Alive {
+  background-color: #198754;
+}
+
+.Dead {
+  background-color: #dc3545;
+}
+
+.unknown {
+  background-color: gray;
+}
