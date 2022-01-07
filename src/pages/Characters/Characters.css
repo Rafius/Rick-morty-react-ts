@@ -13,31 +13,35 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
+  border: 2px solid white;
+  border-radius: 15px;
   width: 300px;
   min-height: 300px;
-  color: white;
+  color: #f8f9fa;
   text-decoration: none;
-  padding: 20px;
+  position: relative;
 }
 
 .Character-status {
-  margin-top: 20px;
+  margin: 20px 0;
+  padding: 5px 15px;
   text-align: center;
-  border-radius: 50%;
-  width: 5rem;
-  height: 2rem;
-  display: flex;
+  font-size: 20px;
+  display: inline-block;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+  top: 0px;
+  right: 5px;
+  position: absolute;
 }
 
 .Alive {
-  background-color: green;
+  background-color: #198754;
 }
 
 .Dead {
-  background-color: red;
+  background-color: #dc3545;
 }
 
 .unknown {
@@ -45,10 +49,8 @@
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
-  width: 250px;
-  min-height: 250px;
+  border-radius: 13px 13px 0 0;
+  min-height: 300px;
   object-fit: contain;
   margin-bottom: 20px;
 }

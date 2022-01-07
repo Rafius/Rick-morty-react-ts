@@ -17,10 +17,10 @@ const Characters = () => {
 
   return (
     <div className="Characters">
-      {characters.map(({ id, status, name, image }) => (
+      {characters.map(({ id, status, name, image, gender }) => (
         <Link className="Character" key={id} to={`/character/${id}`}>
           <img loading="lazy" src={image}></img>
-          {name}
+          {name} {gender}
           <span className={`Character-status ${status}`}>{status}</span>
         </Link>
       ))}
