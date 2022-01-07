@@ -22,7 +22,7 @@ const Character = () => {
   return (
     <div className="Character-Container">
       <img src={character?.image}></img>
-      Character {character?.name}
+      {character?.name}
     </div>
   );
 };
