@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "../components/Header";
 import Characters from "../pages/Characters";
-import Character from "../pages/Character";
+import CharacterInfo from "../pages/CharacterInfo";
 
 const AppRoutes = () => (
   <BrowserRouter>
@@ -10,7 +10,7 @@ const AppRoutes = () => (
     <Routes>
       <Route path="/" element={<Characters />} />
 
-      <Route path="/character/:id" element={<Character />} />
+      <Route path="/character-info/:id" element={<CharacterInfo />} />
     </Routes>
   </BrowserRouter>
 );

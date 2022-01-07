@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import fetchApi from "../../../utils/fetch-api";
+import fetchApi from "../../utils/fetch-api";
 
 const Episodes = () => {
   const [episodes, setEpisodes] = useState([]);

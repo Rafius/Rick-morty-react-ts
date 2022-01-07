@@ -1,30 +1,16 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
-import fetchApi from "../../../utils/fetch-api";
 import "./Characters.css";
-import { CharactersType } from "./CharactersTypes";
+import Character from "../../components/Character";
+import { CharactersType } from "../../types/CharactersTypes";
+import useCharacters from "../../hooks/useCharacters";
 
 const Characters = () => {
-  const [characters, setCharacters] = useState<CharactersType[]>([]);
-  useEffect(() => {
-    fetchApi("https://rickandmortyapi.com/api/character").then(
-      ({ results }) => {
-        setCharacters(results);
-      }
-    );
-  }, []);
+  const { characters } = useCharacters();
 
   return (
     <div className="Characters">
-      {characters.map(({ id, status, name, image, gender }) => (
-        <Link className="Character" key={id} to={`/character/${id}`}>
-          <img loading="lazy" src={image}></img>
-          {name} {gender}
-          <span className={`Character-status ${status}`}>{status}</span>
-        </Link>
+      {characters.map((character: CharactersType) => (
+        <Character {...character} />
       ))}
-      {!characters && <div>Loading...</div>}
     </div>
   );
 };
