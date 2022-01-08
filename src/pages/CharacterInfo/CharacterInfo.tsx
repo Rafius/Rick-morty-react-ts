@@ -1,22 +1,20 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import { CharactersType } from "../../types/CharactersTypes";
+import { CharacterType } from "../../types/CharactersTypes";
 import fetchApi from "../../utils/fetch-api";
 import "./CharacterInfo.css";
 
 const CharacterInfo = () => {
-  const [characterInfo, setCharacterInfo] = useState<CharactersType>();
+  const [characterInfo, setCharacterInfo] = useState<CharacterType>();
   const { id } = useParams();
 
   useEffect(() => {
-    fetchApi(`https://rickandmortyapi.com/api/character/${id}`)
-      .then((data: CharactersType) => {
+    fetchApi(`https://rickandmortyapi.com/api/character/${id}`).then(
+      (data: CharacterType) => {
         setCharacterInfo(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      }
+    );
   }, []);
 
   return (
