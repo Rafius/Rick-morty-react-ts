@@ -48,8 +48,8 @@ const useCharacters = () => {
   return {
     characters,
     currentPage,
-    handlePaginationClick,
-    paginationButtons
+    paginationButtons,
+    handlePaginationClick
   };
 };
 
