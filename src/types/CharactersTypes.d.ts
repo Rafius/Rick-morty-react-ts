@@ -1,4 +1,9 @@
-export interface CharactersType {
+export interface CharacterInfo {
+  info: Info;
+  results: CharacterType[];
+}
+
+export interface CharacterType {
   id: number;
   name: string;
   status: string;
@@ -16,4 +21,11 @@ export interface CharactersType {
 export interface Origin {
   name: string;
   url: string;
+}
+
+export interface Info {
+  count: number;
+  pages: number;
+  next: string;
+  prev?: any;
 }

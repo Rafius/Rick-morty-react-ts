@@ -1,16 +1,25 @@
 import "./Characters.css";
 import Character from "../../components/Character";
-import { CharactersType } from "../../types/CharactersTypes";
+import { CharacterType } from "../../types/CharactersTypes";
 import useCharacters from "../../hooks/useCharacters";
+import Pagination from "../../components/Pagination";
 
 const Characters = () => {
-  const { characters } = useCharacters();
+  const { characters, currentPage, handlePaginationClick, paginationButtons } =
+    useCharacters();
 
   return (
-    <div className="Characters">
-      {characters.map((character: CharactersType) => (
-        <Character {...character} />
-      ))}
+    <div>
+      <Pagination
+        paginationButtons={paginationButtons}
+        handlePaginationClick={handlePaginationClick}
+        currentPage={currentPage}
+      />
+      <div className="Characters">
+        {characters.results.map((character: CharacterType) => (
+          <Character key={character.id} {...character} />
+        ))}
+      </div>
     </div>
   );
 };
