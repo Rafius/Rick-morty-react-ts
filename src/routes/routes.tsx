@@ -11,7 +11,6 @@ const AppRoutes = () => (
     <Routes>
       <Route path="/" element={<Characters />} />
       <Route path="/character-info/:id" element={<CharacterInfo />} />
-
       <Route path="/episodes" element={<Episodes />} />
     </Routes>
   </BrowserRouter>
