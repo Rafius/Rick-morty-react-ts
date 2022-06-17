@@ -9,21 +9,20 @@
     "test:e2e": "cypress run"
   },
   "dependencies": {
-    "path": "^0.12.7",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-router": "6.2.1",
-    "react-router-dom": "6.2.1"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router": "6.3.0",
+    "react-router-dom": "6.3.0"
   },
   "devDependencies": {
-    "@types/react": "17.0.33",
-    "@types/react-dom": "17.0.10",
-    "@vitejs/plugin-react": "1.0.7",
-    "cypress": "^9.7.0",
+    "@types/react": "18.0.14",
+    "@types/react-dom": "18.0.5",
+    "@vitejs/plugin-react": "1.3.2",
+    "cypress": "^10.1.0",
     "eslint-plugin-cypress": "^2.12.1",
-    "typescript": "4.4.4",
-    "vite": "2.7.2",
-    "vite-tsconfig-paths": "3.3.17"
+    "typescript": "4.7.3",
+    "vite": "2.9.12",
+    "vite-tsconfig-paths": "3.5.0"
   },
   "eslintConfig": {
     "extends": [
